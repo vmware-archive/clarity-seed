@@ -19,7 +19,6 @@ Here are the typical steps in a contributor's workflow:
 - Clone your fork and set the upstream remote to the main Clarity repository.
 - Set your name and e-mail in the Git configuration for signing.
 - Create a topic branch from where you want to base your work.
-- Setup your local environment to run and build Clarity. See our [build documentation](BUILD.md).
 - Make commits of logical units.
 - Make sure your commit messages are in the proper format (see below).
 - Push your changes to a topic branch in your fork of the repository.
