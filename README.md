@@ -8,8 +8,9 @@ This seed's build system is written with gulp and provides the following out of 
 
 - Angular 2 application with [clarity-icons](https://www.npmjs.com/package/clarity-icons), [clarity-ui](https://www.npmjs.com/package/clarity-ui) and [clarity-angular](https://www.npmjs.com/package/clarity-angular) included
 - Development and production builds
-- Unit test setup with Jasmine and Karma
-- End-to-end test setup with Protractor
+- Unit test setup with [Jasmine](https://jasmine.github.io/) and [Karma](https://karma-runner.github.io/)
+- Code coverage on unit tests with [Istanbul](http://gotwarlost.github.io/istanbul/)
+- End-to-end test setup with [Protractor](http://www.protractortest.org/)
 - Development server with browsersync
 - SASS processor
 - TSLint
@@ -17,7 +18,6 @@ This seed's build system is written with gulp and provides the following out of 
 Getting started
 ---------------
 #### Installation
-These are the steps to run the seed project:
 ```
 git clone git@github.com:vmware/clarity-seed.git
 cd clarity-seed
@@ -27,9 +27,12 @@ npm install
 
 # starts the application in dev mode and watches your files for livereload
 npm start
+```
 
+#### Test and build scripts
+```
 # running unit tests
-npm run test.unit
+npm test
 
 # running e2e tests
 npm run test.e2e
@@ -57,20 +60,21 @@ For documentation on the Clarity Design System, including a list of components a
 ├── src                        <- source code of the application
 │   ├── app
 │   │   └── components
-│   │       └── app.e2e-spec.js                 <- sample e2e spec file
+│   │       └── <component>.component.html
+│   │       └── <component>.component.scss
 │   │       └── <component>.component.spec.ts
 │   │       └── <component>.component.ts
-│   │       └── <component>.html
-│   │       └── <component>.scss
-│   │   └── app.html
-│   │   └── app.spec.ts
-│   │   └── app.ts
+│   │   └── app.component.html
+│   │   └── app.component.scss
+│   │   └── app.component.ts
+│   │   └── app.e2e-spec.js    <- sample e2e spec file
+│   │   └── app.module.ts
+│   │   └── app.routing.ts
 │   │   └── main.ts            <- boostrap file for the angular app 
 │   └── index.html
-├── .editorconfig              <- configuration file for IDEs
 ├── tsconfig.json              <- configuration of the typescript project
 ├── tslint.json                <- sample configuration file for tslint
-└── typings.json
+└── yarn.lock
 ```
 
 
