@@ -15,7 +15,7 @@ Before you start working with Clarity, please complete the following steps:
 
 Here are the typical steps in a contributor's workflow:
 
-- [Fork](https://help.github.com/articles/fork-a-repo/) the main Clarity repository. 
+- [Fork](https://help.github.com/articles/fork-a-repo/) the main Clarity seed repository. 
 - Clone your fork and set the upstream remote to the main Clarity repository.
 - Set your name and e-mail in the Git configuration for signing.
 - Create a topic branch from where you want to base your work.
