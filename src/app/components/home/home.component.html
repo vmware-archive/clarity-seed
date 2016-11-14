@@ -1,16 +1,18 @@
 <h2>Home</h2>
 <p>This is a Clarity seed application. This is the default page that loads for the application.</p>
 
-<clr-dropdown [clrMenuPosition]="'right-bottom'">
-  <button class="btn btn-primary dropdown-toggle" type="button">
-    Dropdown
-  </button>
-  <div class="dropdown-menu">
-    <label class="dropdown-header">Dropdown header</label>
-    <a class="dropdown-item">Action</a>
-    <a class="dropdown-item">Something else here</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item">Separated link 1</a>
-    <a class="dropdown-item">Separated link 2</a>
-  </div>
+<clr-dropdown [clrMenuPosition]="'bottom-right'">
+    <button class="btn btn-outline-primary" clrDropdownToggle>
+        Dropdown
+        <clr-icon shape="caret" class="icon-orient-down"></clr-icon>
+    </button>
+    <div class="dropdown-menu">
+        <label class="dropdown-header">Dropdown header</label>
+        <a href="javascript://" clrDropdownItem>Action 1</a>
+        <a href="javascript://" clrDropdownItem>Action 2</a>
+        <a href="javascript://" class="disabled" clrDropdownItem>Disabled</a>
+        <div class="dropdown-divider"></div>
+        <a href="javascript://" clrDropdownItem>Link 1</a>
+        <a href="javascript://" clrDropdownItem>Link 2</a>
+    </div>
 </clr-dropdown>

@@ -32,7 +32,7 @@ gulp.task('bundle:app:js', ['compile:ts'], function(){
       meta: {
         '@angular/*':         { build: false },
         'clarity-angular*' :  { build: false },
-        'rxjs/*':             { build: false }
+        'rxjs*':             { build: false }
       },
       packages: {
         'app': { defaultExtension: 'js' }
@@ -69,7 +69,7 @@ gulp.task('bundle:vendor:js', ['compile:ts'], function(){
       packages: {
         'clarity-angular' : { main: 'index.js', defaultExtension: 'js' },
         'dist/tmp/app': { defaultExtension: 'js' },
-        'rxjs': { defaultExtension: 'js' }
+        'rxjs': { main: 'Rx.js', defaultExtension: 'js' },
       }
     });
 
