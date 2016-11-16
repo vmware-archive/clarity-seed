@@ -65,7 +65,7 @@
     "serve.prod": "gulp serve --prod",
     "build.dev": "gulp build",
     "build.prod": "gulp build --prod",
-    "postinstall": "node node_modules/protractor/bin/webdriver-manager update",
+    "postinstall": "./node_modules/protractor/bin/webdriver-manager update",
     "test": "gulp test:unit",
     "test.e2e": "gulp test:e2e"
   }
