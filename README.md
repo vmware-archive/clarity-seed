@@ -19,7 +19,7 @@ Getting started
 ---------------
 #### Installation
 ```
-git clone git@github.com:vmware/clarity-seed.git
+git clone https://github.com/vmware/clarity-seed.git
 cd clarity-seed
 
 # install the project's dependencies
