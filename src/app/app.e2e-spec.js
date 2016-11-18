@@ -5,14 +5,14 @@
  */
 describe('App E2E Tests', function() {
 
-  var expectedMsg = 'Home';
+  var expectedMsg = 'This is a Clarity seed application. This is the default page that loads for the application.';
 
   beforeEach(function() {
     browser.get('/');
   });
 
   it('should display: ' + expectedMsg, function() {
-    expect(element(by.css('h2')).getText()).toEqual(expectedMsg);
+    expect(element(by.css('p')).getText()).toEqual(expectedMsg);
   });
 
 });
