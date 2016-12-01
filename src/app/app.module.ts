@@ -1,30 +1,28 @@
-/*
- * Copyright (c) 2016 VMware, Inc. All Rights Reserved.
- * This software is released under MIT license.
- * The full license information can be found in LICENSE in the root directory of this project.
- */
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { ClarityModule } from 'clarity-angular';
-
-import { ROUTING } from "./app.routing";
-
 import { AppComponent } from './app.component';
-import { AboutComponent } from './components/about/about.component';
-import { HomeComponent } from './components/home/home.component';
+import { ROUTING } from "./app.routing";
+import { HomeComponent } from "./home/home.component";
+import { AboutComponent } from "./about/about.component";
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    ClarityModule,
-    ROUTING
-  ],
-  declarations: [
-    AppComponent,
-    AboutComponent,
-    HomeComponent
-  ],
-  bootstrap: [ AppComponent ]
+    declarations: [
+        AppComponent,
+        AboutComponent,
+        HomeComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        ClarityModule,
+        ROUTING
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }
