@@ -3,14 +3,14 @@
  * This software is released under MIT license.
  * The full license information can be found in LICENSE in the root directory of this project.
  */
-import { async, TestBed, ComponentFixture } from "@angular/core/testing";
+import { async, TestBed, ComponentFixture } from '@angular/core/testing';
 import { ClarityModule } from 'clarity-angular';
 import { AboutComponent } from './about.component';
 
 
 describe('AboutComponent', () => {
 
-    let expectedMsg: string = 'This is a page to help demonstrate routing.';
+    let expectedMsg = 'This is a page to help demonstrate routing.';
 
     let fixture: ComponentFixture<any>;
     let compiled: any;
@@ -40,7 +40,7 @@ describe('AboutComponent', () => {
     }));
 
     it(`should display: "${expectedMsg}"`, async(() => {
-        expect(compiled.querySelector("p").textContent).toMatch(expectedMsg);
+        expect(compiled.querySelector('p').textContent).toMatch(expectedMsg);
     }));
 
 

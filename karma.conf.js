@@ -1,44 +1,94 @@
-// Karma configuration file, see link for more information
-// https://karma-runner.github.io/0.13/config/configuration-file.html
+var path = require('path');
+
+var webpackConfig = require('./config/webpack.dev');
+
+// CommonsChunkPlugin is not compatible with karma-webpack so we have to remove it from the plugins manually.
+var commonsChunkPluginIndex = webpackConfig.plugins.findIndex(function (plugin) {
+    return plugin.chunkNames;
+});
+webpackConfig.plugins.splice(commonsChunkPluginIndex, 1);
+
+
+var ENV = process.env.npm_lifecycle_event;
+var isTestWatch = ENV === 'test-watch';
 
 module.exports = function (config) {
-    config.set({
+    var _config = {
+
+        // base path that will be used to resolve all patterns (eg. files, exclude)
         basePath: '',
-        frameworks: ['jasmine', 'angular-cli'],
-        plugins: [
-            require('karma-jasmine'),
-            require('karma-phantomjs-launcher'),
-            require('karma-mocha-reporter'),
-            require('karma-remap-istanbul'),
-            require('angular-cli/plugins/karma')
-        ],
+
+        // frameworks to use
+        // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
+        frameworks: ['jasmine'],
+
+        // list of files / patterns to load in the browser
         files: [
-            {pattern: './src/test.ts', watched: false}
+            {pattern: './karma-shim.js', watched: false}
         ],
+
+        // list of files to exclude
+        exclude: [],
+
+        // preprocess matching files before serving them to the browser
+        // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            './src/test.ts': ['angular-cli']
+            './karma-shim.js': ['webpack', 'sourcemap']
         },
-        mime: {
-            'text/x-typescript': ['ts', 'tsx']
+
+        webpack: webpackConfig,
+
+        webpackMiddleware: {
+            // webpack-dev-middleware configuration
+            // i. e.
+            stats: 'errors-only'
         },
-        remapIstanbulReporter: {
-            reports: {
-                html: 'coverage',
-                lcovonly: './coverage/coverage.lcov'
-            }
+
+        webpackServer: {
+            noInfo: true // please don't spam the console when running in karma!
         },
-        angularCli: {
-            config: './angular-cli.json',
-            environment: 'dev'
-        },
-        reporters: config.angularCli && config.angularCli.codeCoverage
-            ? ['mocha', 'karma-remap-istanbul']
-            : ['mocha'],
+
+        // test results reporter to use
+        // possible values: 'dots', 'progress', 'mocha'
+        // available reporters: https://npmjs.org/browse/keyword/karma-reporter
+        reporters: ["mocha"],
+
+        // web server port
         port: 9876,
+
+        // enable / disable colors in the output (reporters and logs)
         colors: true,
+
+        // level of logging
+        // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
         logLevel: config.LOG_INFO,
-        autoWatch: true,
-        browsers: ['PhantomJS'],
+
+        // enable / disable watching file and executing tests whenever any file changes
+        autoWatch: false,
+
+        // start these browsers
+        // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+        browsers: isTestWatch ? ['Chrome'] : ['PhantomJS'],
+
+        // Continuous Integration mode
+        // if true, Karma captures browsers, runs the tests and exits
         singleRun: true
-    });
+    };
+
+    if (!isTestWatch) {
+        _config.reporters.push("coverage");
+
+        _config.coverageReporter = {
+            dir: 'coverage/',
+            reporters: [{
+                type: 'json',
+                dir: 'coverage',
+                subdir: 'json',
+                file: 'coverage-final.json'
+            }]
+        };
+    }
+
+    config.set(_config);
+
 };
