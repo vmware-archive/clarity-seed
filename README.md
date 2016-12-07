@@ -4,6 +4,20 @@ Clarity Seed
 ============
 This is a seed project for Angular 2 applications using [Clarity](https://github.com/vmware/clarity). For more information on the Clarity Design System, visit the [Clarity website](https://vmware.github.io/clarity/).
 
+We offer this seed project in three different build systems:
+
+1. Angular-CLI version (branch: master)
+
+2. Webpack 2 version (branch: webpack)
+
+3. **SystemJS version (branch: systemjs)**
+
+
+Getting started
+---------------
+
+#### SystemJS version
+
 This seed's build system is written with gulp and provides the following out of the box:
 
 - Angular 2 application with [clarity-icons](https://www.npmjs.com/package/clarity-icons), [clarity-ui](https://www.npmjs.com/package/clarity-ui) and [clarity-angular](https://www.npmjs.com/package/clarity-angular) included
@@ -15,8 +29,7 @@ This seed's build system is written with gulp and provides the following out of 
 - SASS processor
 - TSLint
 
-Getting started
----------------
+
 #### Installation
 ```
 git clone https://github.com/vmware/clarity-seed.git
@@ -70,7 +83,7 @@ For documentation on the Clarity Design System, including a list of components a
 │   │   └── app.e2e-spec.js    <- sample e2e spec file
 │   │   └── app.module.ts
 │   │   └── app.routing.ts
-│   │   └── main.ts            <- boostrap file for the angular app 
+│   │   └── main.ts            <- boostrap file for the angular app
 │   └── index.html
 ├── tsconfig.json              <- configuration of the typescript project
 ├── tslint.json                <- sample configuration file for tslint
