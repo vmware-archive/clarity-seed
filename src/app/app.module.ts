@@ -16,7 +16,7 @@ import { HomeComponent } from './components/home/home.component';
 @NgModule({
   imports: [
     BrowserModule,
-    ClarityModule,
+    ClarityModule.forRoot(),
     ROUTING
   ],
   declarations: [

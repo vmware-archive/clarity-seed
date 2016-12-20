@@ -32,7 +32,6 @@ var allSpecFiles = Object.keys(window.__karma__.files)
 
 var packages = {
   'app':              { defaultExtension: 'js' },
-  'clarity-angular':  { main: 'index.js', defaultExtension: 'js' },
   'rxjs':             { main: 'Rx.js', defaultExtension: 'js' }
 };
 
@@ -40,7 +39,7 @@ System.config({
   baseURL: '/base',
   map: {
     'app':              '/base/dist/dev/app',
-    'clarity-angular':  'node_modules/clarity-angular',
+    'clarity-angular':  'node_modules/clarity-angular/clarity-angular.umd.js',
     'rxjs':             'node_modules/rxjs',
     // angular bundles
     '@angular/core': 'node_modules/@angular/core/bundles/core.umd.js',
