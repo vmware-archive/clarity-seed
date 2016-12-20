@@ -18,7 +18,7 @@ import { AboutComponent } from "./about/about.component";
         BrowserModule,
         FormsModule,
         HttpModule,
-        ClarityModule,
+        ClarityModule.forRoot(),
         ROUTING
     ],
     providers: [],
