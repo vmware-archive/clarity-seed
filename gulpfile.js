@@ -64,7 +64,8 @@ gulp.task('bundle:vendor:js', ['compile:ts'], function(){
         '@angular/platform-browser-dynamic':  '@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
         '@angular/http':                      '@angular/http/bundles/http.umd.js',
         '@angular/router':                    '@angular/router/bundles/router.umd.js',
-        '@angular/forms':                     '@angular/forms/bundles/forms.umd.js'
+        '@angular/forms':                     '@angular/forms/bundles/forms.umd.js',
+        'clarity-angular':                    'clarity-angular/clarity-angular.umd.js'
       },
       packageConfigPaths: ['node_modules/*/package.json', 'node_modules/@angular/*/package.json'],
       paths: {
@@ -72,9 +73,8 @@ gulp.task('bundle:vendor:js', ['compile:ts'], function(){
         '*': 'node_modules/*'
       },
       packages: {
-        'clarity-angular' : { main: 'index.js', defaultExtension: 'js' },
         'dist/tmp/app': { defaultExtension: 'js' },
-        'rxjs': { main: 'Rx.js', defaultExtension: 'js' },
+        'rxjs': { main: 'Rx.js', defaultExtension: 'js' }
       }
     });
 
@@ -247,6 +247,7 @@ gulp.task('test:e2e', ['serve'], function(done) {
   var protractor = spawn('protractor', ['protractor.config.js'], { stdio: 'inherit' });
   protractor.on('exit', function(code) {
     done(code === 0 ? null : 'ERROR: protractor process exited with code: ' + code);
+    process.exit(code);
   });
 });
 

@@ -12,6 +12,8 @@ exports.config = {
     'browserName': 'chrome'
   },
 
+  chromeDriver: 'node_modules/webdriver-manager/selenium/chromedriver_2.25',
+
   directConnect: true,
 
   framework: 'jasmine2',
