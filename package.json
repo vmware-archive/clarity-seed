@@ -1,6 +1,6 @@
 {
     "name": "clarity-seed",
-    "version": "0.7.0",
+    "version": "0.8.0",
     "description": "Angular-CLI starter for a Clarity project",
     "angular-cli": {},
     "scripts": {
@@ -10,7 +10,7 @@
         "pree2e": "webdriver-manager update",
         "typings": "typings",
         "postinstall": "typings install",
-        "e2e": "protractor"
+        "e2e": "protractor protractor.config.js"
     },
     "private": true,
     "dependencies": {
@@ -23,9 +23,9 @@
         "@angular/platform-browser-dynamic": "2.2.3",
         "@angular/router": "3.2.3",
         "@webcomponents/custom-elements": "1.0.0-alpha.3",
-        "clarity-angular": "^0.7.5",
-        "clarity-icons": "^0.7.5",
-        "clarity-ui": "^0.7.5",
+        "clarity-angular": "^0.8.0",
+        "clarity-icons": "^0.8.0",
+        "clarity-ui": "^0.8.0",
         "core-js": "^2.4.1",
         "es6-shim": "^0.35.1",
         "mutationobserver-shim": "^0.3.2",
@@ -50,7 +50,7 @@
         "karma-mocha-reporter": "^2.2.1",
         "karma-phantomjs-launcher": "^1.0.0",
         "karma-remap-istanbul": "^0.2.1",
-        "protractor": "4.0.9",
+        "protractor": "4.0.13",
         "ts-node": "1.2.1",
         "tslint": "3.13.0",
         "typescript": "~2.0.3",
