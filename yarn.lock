@@ -17,6 +17,14 @@
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/@angular/common/-/common-2.2.3.tgz#0d26bdfdea362ed32e436ced4f31bb69a9d7b9e4"
 
+"@angular/compiler-cli@^2.1.0":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-2.4.1.tgz#9291504197a199fee2f48353d67431a1a9e40833"
+  dependencies:
+    "@angular/tsc-wrapped" "0.5.0"
+    minimist "^1.2.0"
+    reflect-metadata "^0.1.2"
+
 "@angular/compiler-cli@2.2.3":
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-2.2.3.tgz#d632bbf856802a20fc5589cb472f98fef5f011c4"
@@ -25,9 +33,17 @@
     minimist "^1.2.0"
     reflect-metadata "^0.1.2"
 
+"@angular/compiler@^2.1.0":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-2.4.1.tgz#62b4fbfc53c934bd5def78db594cbf245b3f446a"
+
 "@angular/compiler@2.2.3":
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-2.2.3.tgz#5a96b8b6c620ffe0c3b87b2f254e588abeb77a12"
+
+"@angular/core@^2.1.0":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-2.4.1.tgz#3a6d2dc7fd86fdebe4febae7eb28abad7d04c76a"
 
 "@angular/core@2.2.3":
   version "2.2.3"
@@ -59,7 +75,13 @@
   dependencies:
     tsickle "^0.1.7"
 
-"@ngtools/webpack@^1.0.0":
+"@angular/tsc-wrapped@0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@angular/tsc-wrapped/-/tsc-wrapped-0.5.0.tgz#e50f81af02c6817dcaba22032e49ba8060d628b4"
+  dependencies:
+    tsickle "^0.2"
+
+"@ngtools/webpack@^1.1.0":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-1.2.1.tgz#b32a2cda4aabb14518b3a16840b30d6a0e2f131e"
   dependencies:
@@ -68,21 +90,21 @@
     magic-string "^0.16.0"
     source-map "^0.5.6"
 
-"@types/jasmine@^2.2.30", "@types/jasmine@^2.2.31":
+"@types/jasmine@^2.2.30", "@types/jasmine@^2.5.36":
   version "2.5.38"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.5.38.tgz#a4379124c4921d4e21de54ec74669c9e9b356717"
 
-"@types/node@^6.0.35", "@types/node@^6.0.42":
+"@types/node@^6.0.42", "@types/node@^6.0.46":
   version "6.0.52"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.52.tgz#1ac3a99b42320f9e463482f25af4c2359473aaa6"
 
-"@types/q@^0.0.30":
-  version "0.0.30"
-  resolved "https://registry.yarnpkg.com/@types/q/-/q-0.0.30.tgz#fd7ee1af40f21cdd1f519268073b3432ec17d7a3"
+"@types/q@^0.0.32":
+  version "0.0.32"
+  resolved "https://registry.yarnpkg.com/@types/q/-/q-0.0.32.tgz#bd284e57c84f1325da702babfc82a5328190c0c5"
 
-"@types/selenium-webdriver@~2.53.30":
-  version "2.53.36"
-  resolved "https://registry.yarnpkg.com/@types/selenium-webdriver/-/selenium-webdriver-2.53.36.tgz#a2d27d0709b368ae0894fc30c0e40af827d6e851"
+"@types/selenium-webdriver@~2.53.31":
+  version "2.53.37"
+  resolved "https://registry.yarnpkg.com/@types/selenium-webdriver/-/selenium-webdriver-2.53.37.tgz#34f743c20e53ae7100ede90870fde554df2447f8"
 
 "@webcomponents/custom-elements@1.0.0-alpha.3":
   version "1.0.0-alpha.3"
@@ -152,17 +174,18 @@ amdefine@>=0.0.4, amdefine@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.0.tgz#fd17474700cb5cc9c2b709f0be9d23ce3c198c33"
 
-angular-cli@1.0.0-beta.22-1:
-  version "1.0.0-beta.22-1"
-  resolved "https://registry.yarnpkg.com/angular-cli/-/angular-cli-1.0.0-beta.22-1.tgz#efea89b17dcbd74ca3bb7e4a6bbacabf565e610f"
+angular-cli@1.0.0-beta.20-4:
+  version "1.0.0-beta.20-4"
+  resolved "https://registry.yarnpkg.com/angular-cli/-/angular-cli-1.0.0-beta.20-4.tgz#16f5a0aba5a348e158adf35c2430bd36a1507243"
   dependencies:
     "@angular-cli/ast-tools" "^1.0.1"
     "@angular-cli/base-href-webpack" "^1.0.0"
-    "@angular/compiler" "2.2.3"
-    "@angular/compiler-cli" "2.2.3"
-    "@angular/core" "2.2.3"
-    "@ngtools/webpack" "^1.0.0"
+    "@angular/compiler" "^2.1.0"
+    "@angular/compiler-cli" "^2.1.0"
+    "@angular/core" "^2.1.0"
+    "@ngtools/webpack" "^1.1.0"
     angular2-template-loader "^0.5.0"
+    awesome-typescript-loader "^2.2.3"
     chalk "^1.1.3"
     common-tags "^1.3.1"
     compression-webpack-plugin "^0.3.2"
@@ -175,7 +198,6 @@ angular-cli@1.0.0-beta.22-1:
     ember-cli-normalize-entity-name "^1.0.0"
     ember-cli-preprocess-registry "^2.0.0"
     ember-cli-string-utils "^1.0.0"
-    enhanced-resolve "^2.3.0"
     exists-sync "0.0.3"
     extract-text-webpack-plugin "^2.0.0-beta.4"
     file-loader "^0.8.5"
@@ -203,6 +225,7 @@ angular-cli@1.0.0-beta.22-1:
     mkdirp "^0.5.1"
     node-modules-path "^1.0.0"
     node-sass "^3.10.1"
+    node-uuid "^1.4.3"
     nopt "^3.0.1"
     npm-run-all "^3.0.0"
     offline-plugin "^3.4.1"
@@ -238,7 +261,6 @@ angular-cli@1.0.0-beta.22-1:
     tslint-loader "^2.1.4"
     typescript "~2.0.3"
     url-loader "^0.5.7"
-    uuid "^3.0.0"
     walk-sync "^0.2.6"
     webpack "2.1.0-beta.25"
     webpack-dev-server "2.1.0-beta.9"
@@ -483,6 +505,17 @@ autoprefixer@^6.3.1:
     num2fraction "^1.2.2"
     postcss "^5.2.6"
     postcss-value-parser "^3.2.3"
+
+awesome-typescript-loader@^2.2.3:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/awesome-typescript-loader/-/awesome-typescript-loader-2.2.4.tgz#4185d60c035c25515f9c2a747fa5f69b2a001e9e"
+  dependencies:
+    colors "^1.1.2"
+    enhanced-resolve "^2.2.2"
+    loader-utils "^0.2.6"
+    lodash "^4.13.1"
+    object-assign "^4.1.0"
+    source-map-support "^0.4.0"
 
 aws-sign2@~0.6.0:
   version "0.6.0"
@@ -921,17 +954,17 @@ clap@^1.0.9:
   dependencies:
     chalk "^1.1.3"
 
-clarity-angular@^0.7.0:
-  version "0.7.5"
-  resolved "https://registry.yarnpkg.com/clarity-angular/-/clarity-angular-0.7.5.tgz#da95dab23ccca288083b766b298da2cf022f4768"
+clarity-angular@^0.8.0-alpha:
+  version "0.8.0-alpha"
+  resolved "https://registry.yarnpkg.com/clarity-angular/-/clarity-angular-0.8.0-alpha.tgz#82d9be2894b0c101ddde8c7ef5fe744fea80e222"
 
-clarity-icons@^0.7.0:
-  version "0.7.5"
-  resolved "https://registry.yarnpkg.com/clarity-icons/-/clarity-icons-0.7.5.tgz#30006ca1c9005c2f7f0189f446438d522a290216"
+clarity-icons@^0.8.0-alpha:
+  version "0.8.0-alpha"
+  resolved "https://registry.yarnpkg.com/clarity-icons/-/clarity-icons-0.8.0-alpha.tgz#bc15c40296f17a12fb58548276ca5ece0348ace5"
 
-clarity-ui@^0.7.0:
-  version "0.7.5"
-  resolved "https://registry.yarnpkg.com/clarity-ui/-/clarity-ui-0.7.5.tgz#2b03e51e5266c5a56d8330be27bbb8ade4c74540"
+clarity-ui@^0.8.0-alpha:
+  version "0.8.0-alpha"
+  resolved "https://registry.yarnpkg.com/clarity-ui/-/clarity-ui-0.8.0-alpha.tgz#c1f467848663a47fdd9be6c97e01157d52efb404"
 
 clean-css-promise@^0.1.0:
   version "0.1.1"
@@ -1742,7 +1775,7 @@ enhanced-resolve@^0.9.0:
     memory-fs "^0.2.0"
     tapable "^0.1.8"
 
-enhanced-resolve@^2.2.0, enhanced-resolve@^2.3.0:
+enhanced-resolve@^2.2.0, enhanced-resolve@^2.2.2, enhanced-resolve@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-2.3.0.tgz#a115c32504b6302e85a76269d7a57ccdd962e359"
   dependencies:
@@ -2333,7 +2366,7 @@ glob@^5.0.10, glob@^5.0.15, glob@~5.0.0, glob@5.x:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@^7.0.6, glob@~7.1.1:
+glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@~7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.1.tgz#805211df04faaf1c63a3600306cdf5ade50b2ec8"
   dependencies:
@@ -3076,10 +3109,6 @@ jasmine-core@~2.4.0, jasmine-core@2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-2.4.1.tgz#6f83ab3a0f16951722ce07d206c773d57cc838be"
 
-jasmine-core@~2.5.2:
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-2.5.2.tgz#6f61bd79061e27f43e6f9355e44b3c6cab6ff297"
-
 jasmine-spec-reporter@2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/jasmine-spec-reporter/-/jasmine-spec-reporter-2.5.0.tgz#12e4782e6445c0dfabb8def4c52edd30f6362d42"
@@ -3093,14 +3122,6 @@ jasmine@2.4.1:
     exit "^0.1.2"
     glob "^3.2.11"
     jasmine-core "~2.4.0"
-
-jasmine@2.5.2:
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/jasmine/-/jasmine-2.5.2.tgz#6283cef7085c095cc25d651e954df004f7e3e421"
-  dependencies:
-    exit "^0.1.2"
-    glob "^7.0.6"
-    jasmine-core "~2.5.2"
 
 jasminewd2@0.0.10:
   version "0.0.10"
@@ -3642,7 +3663,7 @@ lodash@^3.10.0, lodash@^3.10.1, lodash@^3.8.0:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
-lodash@^4.0.0, lodash@^4.0.1, lodash@^4.11.1, lodash@^4.14.0, lodash@^4.16.4, lodash@^4.17.2, lodash@^4.3.0, lodash@^4.5.0:
+lodash@^4.0.0, lodash@^4.0.1, lodash@^4.11.1, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.16.4, lodash@^4.17.2, lodash@^4.3.0, lodash@^4.5.0:
   version "4.17.2"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.2.tgz#34a3055babe04ce42467b607d700072c7ff6bf42"
 
@@ -4085,7 +4106,7 @@ node-status-codes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/node-status-codes/-/node-status-codes-1.0.0.tgz#5ae5541d024645d32a58fcddc9ceecea7ae3ac2f"
 
-node-uuid@~1.4.7:
+node-uuid@^1.4.3, node-uuid@~1.4.7:
   version "1.4.7"
   resolved "https://registry.yarnpkg.com/node-uuid/-/node-uuid-1.4.7.tgz#6da5a17668c4b3dd59623bda11cf7fa4c1f60a6f"
 
@@ -4846,25 +4867,25 @@ protractor@^3.3.0:
     selenium-webdriver "2.52.0"
     source-map-support "~0.4.0"
 
-protractor@4.0.9:
-  version "4.0.9"
-  resolved "https://registry.yarnpkg.com/protractor/-/protractor-4.0.9.tgz#152f72e3729b2576226e370dc308699cccfa77ba"
+protractor@4.0.13:
+  version "4.0.13"
+  resolved "https://registry.yarnpkg.com/protractor/-/protractor-4.0.13.tgz#24070732cd912545d42ef257c5bbe1998a237f73"
   dependencies:
-    "@types/jasmine" "^2.2.31"
-    "@types/node" "^6.0.35"
-    "@types/q" "^0.0.30"
-    "@types/selenium-webdriver" "~2.53.30"
+    "@types/jasmine" "^2.5.36"
+    "@types/node" "^6.0.46"
+    "@types/q" "^0.0.32"
+    "@types/selenium-webdriver" "~2.53.31"
     adm-zip "0.4.7"
     chalk "^1.1.3"
     glob "^7.0.3"
-    jasmine "2.5.2"
+    jasmine "2.4.1"
     jasminewd2 "0.0.10"
     optimist "~0.6.0"
     q "1.4.1"
     saucelabs "~1.3.0"
     selenium-webdriver "2.53.3"
     source-map-support "~0.4.0"
-    webdriver-manager "^10.2.2"
+    webdriver-manager "^10.2.8"
 
 proxy-addr@~1.1.2:
   version "1.1.2"
@@ -5215,7 +5236,7 @@ request-progress@~2.0.1:
   dependencies:
     throttleit "^1.0.0"
 
-request@^2.27.0, request@^2.61.0, request@^2.69.0, request@^2.79.0, request@>=2.42.0, request@~2.79.0, request@2:
+request@^2.27.0, request@^2.61.0, request@^2.69.0, request@^2.78.0, request@^2.79.0, request@>=2.42.0, request@~2.79.0, request@2:
   version "2.79.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.79.0.tgz#4dfe5bf6be8b8cdc37fcf93e04b65577722710de"
   dependencies:
@@ -5623,6 +5644,12 @@ source-map-support@^0.3.1:
 source-map-support@^0.4.0, source-map-support@~0.4.0:
   version "0.4.6"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.6.tgz#32552aa64b458392a85eab3b0b5ee61527167aeb"
+  dependencies:
+    source-map "^0.5.3"
+
+source-map-support@^0.4.2:
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.7.tgz#7a7988e0e66241c778c78dd179199bb6bcd35bd6"
   dependencies:
     source-map "^0.5.3"
 
@@ -6072,6 +6099,15 @@ tsickle@^0.1.7:
     source-map "^0.4.2"
     source-map-support "^0.3.1"
 
+tsickle@^0.2:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/tsickle/-/tsickle-0.2.3.tgz#3e7d3ff74bbecdadc011cfd747f991dcfd6503af"
+  dependencies:
+    minimist "^1.2.0"
+    mkdirp "^0.5.1"
+    source-map "^0.5.6"
+    source-map-support "^0.4.2"
+
 tslint-loader@^2.1.4:
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/tslint-loader/-/tslint-loader-2.1.5.tgz#77abdfd9bf13d7133a6efa4447a1690783c4bb49"
@@ -6435,7 +6471,22 @@ web-animations-js@^2.2.1:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/web-animations-js/-/web-animations-js-2.2.2.tgz#7c3aa5382c5eade70cd206880d56a37869630638"
 
-webdriver-manager@^10.2.2, webdriver-manager@10.2.5:
+webdriver-manager@^10.2.8:
+  version "10.3.0"
+  resolved "https://registry.yarnpkg.com/webdriver-manager/-/webdriver-manager-10.3.0.tgz#99314588a0b1dbe688c441d74288c6cb1875fa8b"
+  dependencies:
+    adm-zip "^0.4.7"
+    chalk "^1.1.1"
+    del "^2.2.0"
+    glob "^7.0.3"
+    ini "^1.3.4"
+    minimist "^1.2.0"
+    q "^1.4.1"
+    request "^2.78.0"
+    rimraf "^2.5.2"
+    semver "^5.3.0"
+
+webdriver-manager@10.2.5:
   version "10.2.5"
   resolved "https://registry.yarnpkg.com/webdriver-manager/-/webdriver-manager-10.2.5.tgz#6433c1a64b038388c295ed0dc9daa71e5df5024e"
   dependencies:
