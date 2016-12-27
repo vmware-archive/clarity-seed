@@ -21,7 +21,7 @@ describe('AboutComponent', () => {
                 AboutComponent
             ],
             imports: [
-                ClarityModule
+                ClarityModule.forRoot()
             ]
         });
 
