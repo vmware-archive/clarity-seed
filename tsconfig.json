@@ -1,8 +1,10 @@
 {
+    "compileOnSave": true,
     "compilerOptions": {
         "target": "es5",
         "module": "commonjs",
         "moduleResolution": "node",
+        "lib": ["es2015", "dom"],
         "sourceMap": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
@@ -14,6 +16,7 @@
         ]
     },
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "dist"
     ]
 }

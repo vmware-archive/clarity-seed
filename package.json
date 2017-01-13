@@ -7,8 +7,6 @@
     "lint": "tslint \"src/**/*.ts\" || exit 0",
     "test": "karma start",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
-    "typings": "typings",
-    "postinstall": "typings install",
     "pree2e": "webdriver-manager update",
     "e2e": "protractor protractor.config.js"
   },
@@ -69,7 +67,7 @@
     "ts-loader": "^1.2.2",
     "ts-node": "^1.7.2",
     "tslint": "3.13.0",
-    "typescript": "^2.0.3",
+    "typescript": "2.1.1",
     "typings": "^1.4.0",
     "webdriver-manager": "10.2.10",
     "webpack": "^2.1.0-beta.27",
