@@ -103,7 +103,7 @@ module.exports = {
         // providing context to Angular's use of System.import
         // https://github.com/angular/angular/issues/11580
         new webpack.ContextReplacementPlugin(
-            /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+            /angular(\\|\/)core(\\|\/)@angular/,
             helpers.root('src')
         ),
 
