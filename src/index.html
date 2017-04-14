@@ -42,12 +42,25 @@
             'clarity-angular': {main: 'clarity-angular.umd.js', defaultExtension: 'js'},
             'clarity-icons': {main: 'index.js', defaultExtension: 'js'},
             'rxjs': {main: 'Rx.js', defaultExtension: 'js'},
+            '@angular/animations': {
+                main: 'bundles/animations.umd.js',
+                defaultExtension: 'js',
+                map: {
+                    './browser': './bundles/animations-browser.umd'
+                }
+            },
             '@angular/core': {main: 'bundles/core.umd.js', defaultExtension: 'js'},
             '@angular/compiler': {main: 'bundles/compiler.umd.js', defaultExtension: 'js'},
             '@angular/common': {main: 'bundles/common.umd.js', defaultExtension: 'js'},
             '@angular/forms': {main: 'bundles/forms.umd.js', defaultExtension: 'js'},
             '@angular/http': {main: 'bundles/http.umd.js', defaultExtension: 'js'},
-            '@angular/platform-browser': {main: 'bundles/platform-browser.umd.js', defaultExtension: 'js'},
+            '@angular/platform-browser': {
+                main: 'bundles/platform-browser.umd.js',
+                defaultExtension: 'js',
+                map: {
+                    './animations': './bundles/platform-browser-animations.umd'
+                }
+            },
             '@angular/platform-browser-dynamic': {
                 main: 'bundles/platform-browser-dynamic.umd.js',
                 defaultExtension: 'js'
@@ -61,6 +74,7 @@
                 'clarity-angular': 'node_modules/clarity-angular',
                 'clarity-icons': 'node_modules/clarity-icons',
                 'rxjs': 'node_modules/rxjs',
+                '@angular/animations': 'node_modules/@angular/animations',
                 '@angular/core': 'node_modules/@angular/core',
                 '@angular/common': 'node_modules/@angular/common',
                 '@angular/compiler': 'node_modules/@angular/compiler',

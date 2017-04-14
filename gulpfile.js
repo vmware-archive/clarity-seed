@@ -37,7 +37,7 @@ gulp.task('bundle:app:js', ['compile:ts'], function(){
       meta: {
         '@angular/*':         { build: false },
         'clarity-angular*' :  { build: false },
-        'rxjs*':             { build: false }
+        'rxjs*':              { build: false }
       },
       packages: {
         'app': { defaultExtension: 'js' }
@@ -57,24 +57,37 @@ gulp.task('bundle:vendor:js', ['compile:ts'], function(){
     builder.config({
       map: {
         // angular bundles
-        '@angular/core':                      '@angular/core/bundles/core.umd.js',
-        '@angular/common':                    '@angular/common/bundles/common.umd.js',
-        '@angular/compiler':                  '@angular/compiler/bundles/compiler.umd.js',
-        '@angular/platform-browser':          '@angular/platform-browser/bundles/platform-browser.umd.js',
-        '@angular/platform-browser-dynamic':  '@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
-        '@angular/http':                      '@angular/http/bundles/http.umd.js',
-        '@angular/router':                    '@angular/router/bundles/router.umd.js',
-        '@angular/forms':                     '@angular/forms/bundles/forms.umd.js',
-        'clarity-angular':                    'clarity-angular/clarity-angular.umd.js'
+        '@angular/core':                        '@angular/core/bundles/core.umd.js',
+        '@angular/common':                      '@angular/common/bundles/common.umd.js',
+        '@angular/compiler':                    '@angular/compiler/bundles/compiler.umd.js',
+        '@angular/platform-browser-dynamic':    '@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
+        '@angular/http':                        '@angular/http/bundles/http.umd.js',
+        '@angular/router':                      '@angular/router/bundles/router.umd.js',
+        '@angular/forms':                       '@angular/forms/bundles/forms.umd.js',
+        'clarity-angular':                      'clarity-angular/clarity-angular.umd.js'
       },
-      packageConfigPaths: ['node_modules/*/package.json', 'node_modules/@angular/*/package.json'],
+      packageConfigPaths: ['node_modules/*/package.json', 'node_modules/@angular/*/package.json', 'node_modules/@angular/**/*/package.json'],
       paths: {
         'dist/tmp/*': 'dist/tmp/*',
         '*': 'node_modules/*'
       },
       packages: {
         'dist/tmp/app': { defaultExtension: 'js' },
-        'rxjs': { main: 'Rx.js', defaultExtension: 'js' }
+        'rxjs': { main: 'Rx.js', defaultExtension: 'js' },
+        '@angular/animations': {
+          main: 'bundles/animations.umd.js',
+          defaultExtension: 'js',
+          map: {
+              './browser': './bundles/animations-browser.umd'
+          }
+        },
+        '@angular/platform-browser': {
+          main: 'bundles/platform-browser.umd.js',
+          defaultExtension: 'js',
+          map: {
+              './animations': './bundles/platform-browser-animations.umd'
+          }
+        },
       }
     });
 
