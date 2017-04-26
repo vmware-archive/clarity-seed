@@ -17,11 +17,10 @@
   <nav class="sub-nav" [clr-nav-level]="1">
     <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link" href="#" [routerLink]="['/home']"
-           [class.active]="router.url==='/home' || router.url==='/'">Home</a>
+        <a class="nav-link" href="#" [routerLink]="['/home']" routerLinkActive="active">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" [routerLink]="['/about']" [class.active]="router.url==='/about'">About</a>
+        <a class="nav-link" href="#" [routerLink]="['/about']" routerLinkActive="active">About</a>
       </li>
     </ul>
   </nav>
