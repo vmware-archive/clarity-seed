@@ -5,18 +5,16 @@
   -->
 <p>This is a Clarity seed application. This is the default page that loads for the application.</p>
 
-<clr-dropdown [clrMenuPosition]="'bottom-right'">
-    <button class="btn btn-outline-primary" clrDropdownToggle>
+<clr-dropdown>
+    <button clrDropdownTrigger class="btn">
         Dropdown
         <clr-icon shape="caret down"></clr-icon>
     </button>
-    <div class="dropdown-menu">
-        <label class="dropdown-header">Dropdown header</label>
-        <a href="javascript://" clrDropdownItem>Action 1</a>
-        <a href="javascript://" clrDropdownItem>Action 2</a>
-        <a href="javascript://" class="disabled" clrDropdownItem>Disabled</a>
+    <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+        <a clrDropdownItem href="javascript://">Action 1</a>
+        <a clrDropdownItem href="javascript://">Action 2</a>
         <div class="dropdown-divider"></div>
-        <a href="javascript://" clrDropdownItem>Link 1</a>
-        <a href="javascript://" clrDropdownItem>Link 2</a>
-    </div>
+        <a clrDropdownItem href="javascript://">Link 1</a>
+        <a clrDropdownItem href="javascript://">Link 2</a>
+    </clr-dropdown-menu>
 </clr-dropdown>
