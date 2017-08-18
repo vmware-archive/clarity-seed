@@ -3,6 +3,9 @@
 // The full license information can be found in LICENSE in the root directory of this project.
 .clr-icon {
   &.clr-clarity-logo {
-    background-image: url(../images/clarity_logo.svg);
+      background-image: url(../images/clarity_logo.svg);
+      height: 36px;
+      width: 36px;
+      margin-right: 11px;
   }
 }
