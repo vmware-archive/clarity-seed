@@ -7,6 +7,7 @@ import { AboutComponent } from "./about/about.component";
 import { ClarityModule } from "clarity-angular";
 import { ROUTING } from "./app.routing";
 import { APP_BASE_HREF } from "@angular/common";
+import {TestComponent} from "./test/test.component";
 
 describe('AppComponent', () => {
 
@@ -18,10 +19,11 @@ describe('AppComponent', () => {
             declarations: [
                 AppComponent,
                 AboutComponent,
-                HomeComponent
+                HomeComponent,
+                TestComponent
             ],
             imports: [
-                ClarityModule.forRoot(),
+                ClarityModule,
                 ROUTING
             ],
             providers: [{provide: APP_BASE_HREF, useValue: '/'}]

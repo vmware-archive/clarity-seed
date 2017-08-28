@@ -1,20 +1,70 @@
-<!--
-  ~ Copyright (c) 2016 VMware, Inc. All Rights Reserved.
-  ~ This software is released under MIT license.
-  ~ The full license information can be found in LICENSE in the root directory of this project.
-  -->
-<p>This is a Clarity seed application. This is the default page that loads for the application.</p>
+<div class="row">
+    <div class="col-sm-12 col-md-8">
+        <h3>Pick your Star Wars captain</h3>
+        <clr-datagrid
+            [(clrDgSingleSelected)]="selected"
+            (clrDgRefresh)="refresh($event)" [clrDgLoading]="loading">
+            <clr-dg-column>Name</clr-dg-column>
+            <clr-dg-column>Birth Year
+                <clr-tooltip>
+                    <clr-icon clrTooltipTrigger shape="info-circle"></clr-icon>
+                    <clr-tooltip-content clrPosition="right" clrSize="md" *clrIfOpen>
+                        <span>BBY - Before the Battle of Yavin</span>
+                    </clr-tooltip-content>
+                </clr-tooltip>
+            </clr-dg-column>
+            <clr-dg-column>Gender</clr-dg-column>
 
-<clr-dropdown>
-    <button clrDropdownTrigger class="btn">
-        Dropdown
-        <clr-icon shape="caret down"></clr-icon>
-    </button>
-    <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
-        <a clrDropdownItem href="javascript://">Action 1</a>
-        <a clrDropdownItem href="javascript://">Action 2</a>
-        <div class="dropdown-divider"></div>
-        <a clrDropdownItem href="javascript://">Link 1</a>
-        <a clrDropdownItem href="javascript://">Link 2</a>
-    </clr-dropdown-menu>
-</clr-dropdown>
+            <clr-dg-row *ngFor="let user of users" [clrDgItem]="user">
+                <clr-dg-cell>{{user.name}}</clr-dg-cell>
+                <clr-dg-cell>{{user.birth_year}}</clr-dg-cell>
+                <clr-dg-cell>{{user.gender}}</clr-dg-cell>
+            </clr-dg-row>
+
+            <clr-dg-footer>
+                {{pagination.firstItem + 1}} - {{pagination.lastItem + 1}} of {{pagination.totalItems}} users
+                <clr-dg-pagination #pagination [(clrDgPage)]="currentPage"
+                                   [clrDgTotalItems]="total" [clrDgPageSize]="10">
+                </clr-dg-pagination>
+            </clr-dg-footer>
+        </clr-datagrid>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <ng-container *ngIf="selected">
+            <h3>You have selected</h3>
+            <div class="card">
+                <div class="card-header">
+                    Header
+                </div>
+                <div class="card-block">
+                    <clr-alert *ngIf="selected.starships.length == 0"
+                               [clrAlertSizeSmall]="true" [clrAlertType]="'warning'">
+                        <div class="alert-item">
+                     <span class="alert-text">
+                         {{selected.name}} has no starships. May be difficult to get around.
+                     </span>
+                        </div>
+                    </clr-alert>
+                    <div class="card-text">
+                        <ul>
+                            <li>Height: {{selected.height}}</li>
+                            <li>Mass: {{selected.mass}}</li>
+                            <li>Hair Color: {{selected.hair_color}}</li>
+                            <li>Eye Color: {{selected.eye_color}}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6">
+                            <clr-icon shape="car"></clr-icon> {{selected.vehicles.length}} vehicles
+                        </div>
+                        <div class="col-sm-6 col-md-6">
+                            <clr-icon shape="plane"></clr-icon> {{selected.starships.length}} starships
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
