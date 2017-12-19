@@ -19,7 +19,7 @@ Getting started
 
 This seed version provides the following out of the box:
 
-- Angular 2 application with [clarity-icons](https://www.npmjs.com/package/clarity-icons), [clarity-ui](https://www.npmjs.com/package/clarity-ui) and [clarity-angular](https://www.npmjs.com/package/clarity-angular) included
+- Angular 2 application with [@clr/icons](https://www.npmjs.com/package/@clr/icons), [@clr/ui](https://www.npmjs.com/package/@clr/ui) and [@clr/angular](https://www.npmjs.com/package/@clr/angular) included
 - Development and production builds
 - Unit test setup with Jasmine and Karma
 - End-to-end test setup with Protractor
