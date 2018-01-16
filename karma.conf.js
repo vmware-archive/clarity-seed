@@ -13,7 +13,10 @@ module.exports = function (config) {
             require('@angular/cli/plugins/karma')
         ],
         files: [
-            {pattern: './src/test.ts', watched: false}
+            {pattern: './src/test.ts', watched: false},
+            {pattern: './node_modules/clarity-ui/clarity-ui.min.css', watched: false},
+            {pattern: './node_modules/clarity-icons/clarity-icons.min.css', watched: false},
+            {pattern: './node_modules/clarity-icons/clarity-icons.min.js', watched: false}
         ],
         preprocessors: {
             './src/test.ts': ['@angular/cli']
