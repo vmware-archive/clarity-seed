@@ -1,5 +1,19 @@
 ![Clarity](logo.png)
 
+# The Clarity Seed is deprecated
+We highly recommend that all Angular projects use the CLI, because we'll also work on supporting migration features which will make it easier to keep Clarity and Angular up to date.
+
+To integrate Clarity in a new app follow these steps:
+1. Generate a new Angular application (if you haven't already): 
+    - ```ng new my-app```
+2. Navigate to the directory: 
+    - ```cd my-app```
+3. Run the ng add command for Clarity:
+    - ```ng add @clr/angular```
+
+If you already have an angular application and want to add Clarity to it there is only one thing to do: 
+- ```ng add @clr/angular```
+
 Clarity Seed
 ============
 This is a seed project for Angular 2 applications using [Clarity](https://github.com/vmware/clarity). For more information on the Clarity Design System, visit the [Clarity website](https://vmware.github.io/clarity/).
